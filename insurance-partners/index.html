@@ -21,8 +21,6 @@
   <link rel="canonical" href="https://getlivesupport.github.io/billmat/insurance-partners/">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../site.webmanifest">
-  <style>
-    :root{color-scheme:light;--bg:#f4fbf8;--surface:#fff;--text:#16312e;--soft:#45635d;--line:#cfe2db;--brand:#2d7a6e;--brand-deep:#20594f}*{box-sizing:border-box}html{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;scroll-behavior:smooth}body{margin:0;background:#f7fcfa;color:var(--text);font:400 1rem/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.container{width:min(75rem,calc(100% - 2rem));margin:0 auto}.skip-link{position:absolute;left:1rem;top:-3rem;z-index:100;padding:.8rem 1rem;border-radius:999px;background:#fff;color:#16312e;font-weight:700;text-decoration:none}.skip-link:focus{top:1rem}.site-header{position:sticky;top:0;z-index:50;background:rgba(247,252,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav-wrap{min-height:4.75rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}.logo{text-decoration:none;color:var(--text);font-weight:900;letter-spacing:.1em}.logo span{color:var(--brand)}.site-nav{display:flex;gap:1rem;flex-wrap:wrap}.site-nav a{text-decoration:none;color:var(--text);font-weight:600}.menu-toggle{display:none}.page-hero{padding:clamp(3.5rem,8vw,6rem) 0;background:linear-gradient(135deg,#123a35,#20594f 50%,#2d7a6e);color:#fff}.page-hero .hero-box{max-width:46rem;padding:1.6rem;border-radius:1.8rem;background:rgba(12,27,26,.34);border:1px solid rgba(255,255,255,.14)}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;font-weight:800;color:rgba(255,255,255,.88);margin:0 0 .75rem}h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;letter-spacing:-.04em}p{margin:0 0 1rem}.container .dark-eyebrow{color:#20594f}.breadcrumbs ol{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:1rem 0 0;margin:0}.breadcrumbs li::after{content:"/";margin-left:.5rem;color:#9fc7bc}.breadcrumbs li:last-child::after{content:""}img,svg{display:block;max-width:100%;height:auto}@media(max-width:52rem){.menu-toggle{display:inline-flex}.site-nav{display:none}.container{width:min(75rem,calc(100% - 1.25rem))}}</style>
   <link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
   <script src="../js/main.js" defer></script>
@@ -70,52 +68,63 @@
         <li><a aria-current="page" href="./">Insurance payment guides</a></li>
       </ol>
     </nav>
-    <section class="page-hero">
+    <section class="page-hero teal-hero">
       <div class="container">
         <div class="hero-box">
           <p class="eyebrow">Browse by insurer</p>
           <h1>Insurance payment guides for Progressive, Allstate, and Bristol West</h1>
-          <p>Use this guide index when you want to compare insurance payment options, review billing contacts to verify, or jump directly to insurer-specific FAQs about how to pay car insurance.</p>
-          <p class="last-reviewed"><span>Last reviewed: September 18, 2026</span><span>Editorial review: BillMat checks insurer payment links, billing language, and correction requests before publishing updates.</span></p>
+          <p>Use this guide index to review payment options, compare official billing references, and jump directly to insurer-specific questions about how to pay insurance.</p>
+          <p class="last-reviewed"><span>Last reviewed: September 18, 2026</span><span>Editorial review: BillMat checks insurer payment links, billing language, and correction requests before publishing or updating a guide.</span></p>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="container">
         <div class="card-grid three">
           <article class="partner-card">
-            <span class="company-badge company-progressive" aria-hidden="true">P</span>
+            <div class="company-mark">
+              <img src="../assets/logos/progressive-logo.svg" alt="Progressive logo" width="220" height="80">
+            </div>
             <h2>Progressive payment guide</h2>
-            <p>Explore Quick Pay, phone payments, online account billing, mailed payments, and questions to verify about installment fees or grace periods.</p>
+            <p>Review alternative payment methods, Quick Pay steps, billing questions, and official contact references to confirm before making a payment.</p>
             <a class="button" href="progressive.html">Read Progressive guide</a>
           </article>
+
           <article class="partner-card">
-            <span class="company-badge company-allstate" aria-hidden="true">A</span>
+            <div class="company-mark">
+              <img src="../assets/logos/allstate-logo.svg" alt="Allstate logo" width="220" height="80">
+            </div>
             <h2>Allstate billing options</h2>
-            <p>Review common Allstate billing methods, app and autopay reminders, and supplied phone numbers and mailing references to confirm on your current bill.</p>
+            <p>Review common Allstate payment channels, autopay questions, and current billing references to verify against the official insurer account.</p>
             <a class="button" href="allstate.html">Read Allstate guide</a>
           </article>
+
           <article class="partner-card">
-            <span class="company-badge company-bristol" aria-hidden="true">B</span>
+            <div class="company-mark">
+              <img src="../assets/logos/bristol-west-logo.svg" alt="Bristol West logo" width="220" height="80">
+            </div>
             <h2>Bristol West payment methods</h2>
-            <p>Understand Bristol West online, phone, retail, and mail payment methods, along with reminders to verify any fees, codes, deadlines, or policy changes.</p>
+            <p>Understand online, phone, retail, and mail payment references, plus the details that should be checked before using a code or address.</p>
             <a class="button" href="bristol-west.html">Read Bristol West guide</a>
           </article>
         </div>
       </div>
     </section>
+
     <section class="section-tight">
       <div class="container content-grid">
         <article class="surface-card">
-          <p class="eyebrow dark-eyebrow">What every guide includes</p>
-          <h2>Each page is designed to answer the next useful question</h2>
+          <p class="eyebrow dark-eyebrow">What each guide includes</p>
+          <h2>Each page focuses on straightforward billing details</h2>
           <ul>
-            <li>How to pay insurance premium online through official insurer channels</li>
-            <li>What phone numbers, mailing addresses, and account links should be verified before use</li>
-            <li>Which payment terms need confirmation, such as autopay discounts, installment fees, or grace periods</li>
-            <li>Related reading for privacy, editorial standards, and BillMat's independence disclaimer</li>
+            <li>How to pay through the insurer's official account or website</li>
+            <li>Which phone numbers, addresses, and account references should be verified</li>
+            <li>Which billing terms may depend on policy, state, or account setup</li>
+            <li>Related information for trust, editorial standards, and source verification</li>
           </ul>
         </article>
+
         <article class="surface-card">
           <p class="eyebrow dark-eyebrow">Need site context first?</p>
           <h2>Review the pages that support trust and transparency</h2>

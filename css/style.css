@@ -215,11 +215,16 @@ strong { color: var(--heading); }
 }
 
 .site-nav a:hover,
-.site-nav a[aria-current="page"] { color: var(--brand); }
+.site-nav a[aria-current="page"] {
+  color: var(--brand);
+}
 
 .hero,
 .page-hero,
-.guide-hero { position: relative; overflow: clip; }
+.guide-hero {
+  position: relative;
+  overflow: clip;
+}
 
 .hero { padding: clamp(4rem, 8vw, 7rem) 0 var(--space-6); }
 
@@ -394,6 +399,26 @@ strong { color: var(--heading); }
 .allstate-accent { background: linear-gradient(135deg, var(--allstate-deep), var(--allstate)); }
 .company-bristol,
 .bristol-accent { background: linear-gradient(135deg, var(--bristol-deep), var(--bristol)); }
+
+.partner-card .company-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 4.75rem;
+  margin-bottom: 1rem;
+  padding: 0.9rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(18, 39, 37, 0.06), rgba(45, 122, 110, 0.08));
+  border: 1px solid var(--line);
+}
+
+.partner-card .company-mark img {
+  max-width: 12rem;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
 .surface-card,
 .table-card,
