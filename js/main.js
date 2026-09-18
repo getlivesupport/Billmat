@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.site-nav');
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const setHeaderState = () => {
     if (header) {
@@ -46,20 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener('click', (event) => {
-      const href = link.getAttribute('href');
-      if (!href || href === '#') return;
-      const target = document.querySelector(href);
-      if (!target) return;
-      event.preventDefault();
-      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
-      target.setAttribute('tabindex', '-1');
-      target.focus({ preventScroll: true });
-      target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
-    });
-  });
-
   document.querySelectorAll('.faq-toggle').forEach((button) => {
     const controls = button.getAttribute('aria-controls');
     const panel = controls ? document.getElementById(controls) : null;
@@ -79,7 +64,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setHeaderState();
   window.addEventListener('scroll', setHeaderState, { passive: true });
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 832) closeMenu();
-  });
 });
