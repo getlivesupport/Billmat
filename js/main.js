@@ -33,7 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', (event) => {
       if (!nav.classList.contains('open')) return;
-      if (!(event.target instanceof Node)) return;
+      if (!(event.target instanceof Element)) {
+        closeMenu();
+        return;
+      }
       if (nav.contains(event.target) || toggle.contains(event.target)) return;
       closeMenu();
     });

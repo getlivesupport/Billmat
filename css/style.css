@@ -765,10 +765,13 @@ td {
 .related-grid,
 .footer-grid,
 .card-grid.three,
-.card-grid.four,
 .contact-grid,
 .utility-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-grid.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .card-grid.two,
