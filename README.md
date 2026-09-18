@@ -22,7 +22,7 @@ The website is designed to be:
 ## File structure
 
 ```text
-Billmat/
+BillMat/
 ├── 404.html
 ├── README.md
 ├── about.html
