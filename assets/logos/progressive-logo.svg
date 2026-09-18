@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" role="img" aria-label="Progressive logo">
+  <defs>
+    <linearGradient id="progGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00a0d7"/>
+      <stop offset="100%" stop-color="#0b4aa8"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="80" rx="12" fill="#f3f8ff"/>
+  <rect x="10" y="10" width="52" height="60" rx="12" fill="url(#progGrad)"/>
+  <path d="M28 20h10v40h-10zM28 20h18c8 0 14 4 14 12 0 7-6 12-14 12H28v16H18V20h10zm10 10h4c4 0 6 2 6 5 0 3-2 5-6 5h-4v-10z" fill="#ffffff"/>
+  <text x="78" y="49" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#1a3d6d">Progressive</text>
+</svg>

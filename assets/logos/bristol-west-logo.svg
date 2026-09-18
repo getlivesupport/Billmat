@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" role="img" aria-label="Bristol West logo">
+  <rect width="220" height="80" rx="12" fill="#effaf7"/>
+  <rect x="10" y="10" width="54" height="60" rx="12" fill="#2d7a6e"/>
+  <path d="M26 22h20c10 0 16 6 16 14s-6 14-16 14H26v10H18V22h8zm8 8v12h10c4 0 7-2 7-6s-3-6-7-6H34z" fill="#ffffff"/>
+  <text x="82" y="49" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1a3a35">Bristol West</text>
+</svg>
