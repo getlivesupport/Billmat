@@ -33,13 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', (event) => {
       if (!nav.classList.contains('open')) return;
-      const target =
-        event.target instanceof Element
-          ? event.target
-          : event.target instanceof Node
-            ? event.target.parentElement
-            : null;
-      if (target && (nav.contains(target) || toggle.contains(target))) return;
+      const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
+      if (path.includes(nav) || path.includes(toggle)) return;
       closeMenu();
     });
 
