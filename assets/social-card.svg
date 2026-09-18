@@ -9,8 +9,8 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
-  <circle cx="980" cy="150" r="140" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="1100" cy="540" r="180" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="980" cy="150" r="140" fill="#ffffff" fill-opacity="0.08"/>
+  <circle cx="1100" cy="540" r="180" fill="#ffffff" fill-opacity="0.06"/>
   <rect x="70" y="72" width="158" height="158" rx="34" fill="#ffffff" opacity="0.12"/>
   <text x="105" y="185" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="800" fill="#ffffff">BM</text>
   <text x="70" y="315" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="800" fill="#ffffff">BillMat LLC</text>
