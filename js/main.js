@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!nav.classList.contains('open')) return;
       const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
       if (path.includes(nav) || path.includes(toggle)) return;
+      if (event.target instanceof Node && (nav.contains(event.target) || toggle.contains(event.target))) return;
       closeMenu();
     });
 
