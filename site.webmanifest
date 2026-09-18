@@ -2,13 +2,13 @@
   "name": "BillMat LLC",
   "short_name": "BillMat",
   "description": "Independent insurance payment guides with official insurer links and verification reminders.",
-  "start_url": "/billmat/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#f4fbf8",
   "theme_color": "#2d7a6e",
   "icons": [
     {
-      "src": "/billmat/assets/favicon.svg",
+      "src": "assets/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
