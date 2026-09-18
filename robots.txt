@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://getlivesupport.github.io/billmat/sitemap.xml

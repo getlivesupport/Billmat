@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">BillMat LLC social image</title>
+  <desc id="desc">A teal editorial social card for BillMat LLC insurance payment guides.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2f2b"/>
+      <stop offset="55%" stop-color="#20594f"/>
+      <stop offset="100%" stop-color="#2d7a6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <circle cx="980" cy="150" r="140" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="1100" cy="540" r="180" fill="rgba(255,255,255,0.06)"/>
+  <rect x="70" y="72" width="158" height="158" rx="34" fill="#ffffff" opacity="0.12"/>
+  <text x="105" y="185" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="800" fill="#ffffff">BM</text>
+  <text x="70" y="315" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="800" fill="#ffffff">BillMat LLC</text>
+  <text x="70" y="395" font-family="Inter, Arial, sans-serif" font-size="34" fill="#e8f5f1">Independent insurance payment guides with official links,</text>
+  <text x="70" y="442" font-family="Inter, Arial, sans-serif" font-size="34" fill="#e8f5f1">billing checklists, and insurer contact references to verify.</text>
+  <rect x="70" y="490" width="510" height="64" rx="32" fill="#ffffff"/>
+  <text x="102" y="533" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#20594f">getlivesupport.github.io/billmat</text>
+</svg>
