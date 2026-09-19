@@ -239,6 +239,45 @@ strong { color: var(--heading); }
 
 .hero { padding: clamp(4rem, 8vw, 7rem) 0 var(--space-6); }
 
+.hero {
+  background:
+    radial-gradient(circle at 6% 0%, rgba(45, 122, 110, 0.10), transparent 36%),
+    radial-gradient(circle at 94% 8%, rgba(16, 88, 80, 0.10), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f6fbf9 100%);
+}
+
+.hero .container { position: relative; z-index: 1; }
+
+.hero-copy h1 {
+  max-width: 14ch;
+  letter-spacing: -0.045em;
+}
+
+.hero-panel {
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-stat {
+  background: linear-gradient(145deg, #ffffff, var(--surface-alt));
+  border-color: #d5e5e1;
+}
+
+.hero-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+#guide-overview .partner-card {
+  border-color: #d0e2dd;
+  box-shadow: 0 14px 32px rgba(17, 39, 37, 0.08);
+}
+
+#guide-overview .partner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
 .hero-grid,
 .hero-columns {
   display: grid;
@@ -928,24 +967,27 @@ hr.section-rule {
     display: none;
     flex-direction: column;
     align-items: stretch;
+    gap: 0.35rem;
     padding: 1rem;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(170, 199, 192, 0.42);
     border-radius: 1rem;
-    background: #ffffff;
+    background: rgba(10, 29, 26, 0.98);
     box-shadow: var(--shadow-lg);
     z-index: 60;
   }
 
   .site-nav.open { display: flex; }
   .site-nav a {
+    display: block;
+    width: 100%;
     padding: 0.6rem 0.5rem;
-    color: var(--heading);
+    color: #ffffff;
     border-radius: 0.6rem;
   }
   .site-nav a:hover,
   .site-nav a[aria-current="page"] {
-    color: var(--brand-deep);
-    background: var(--surface-alt);
+    color: var(--footer-soft);
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .container { width: min(var(--container), calc(100% - 1.25rem)); }
@@ -976,37 +1018,5 @@ hr.section-rule {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --bg: #091412;
-    --surface: #10211f;
-    --surface-alt: #132a27;
-    --surface-strong: #163632;
-    --text: #ecf7f3;
-    --text-soft: #b6d0ca;
-    --heading: #ffffff;
-    --line: #284541;
-    --line-strong: #4e7d74;
-    --brand-soft: #23463f;
-    --warning: #352b12;
-    --warning-line: #f0c14b;
-    --footer: #050c0b;
-    --footer-soft: #a3c1bb;
-    --shadow-sm: 0 18px 32px rgba(0, 0, 0, 0.28);
-    --shadow-md: 0 28px 46px rgba(0, 0, 0, 0.35);
-  }
-
-  body { background: linear-gradient(180deg, #0b1413 0%, var(--bg) 18rem, var(--bg) 100%); }
-  .site-header { background: rgba(9, 20, 18, 0.92); }
-  .site-header.scrolled { background: rgba(16, 33, 31, 0.96); }
-  .button-secondary { background: rgba(16, 33, 31, 0.72); }
-  .insurer-profile {
-    background: linear-gradient(135deg, rgba(11, 22, 20, 0.97), rgba(16, 33, 31, 0.95));
-    border-color: rgba(78, 125, 116, 0.4);
-  }
-  .company-brand {
-    background: linear-gradient(135deg, rgba(8, 32, 31, 0.94), rgba(11, 27, 26, 0.98));
-  }
-  .insurer-details { background: rgba(12, 24, 22, 0.82); }
-  .quick-answer { background: linear-gradient(135deg, rgba(45, 122, 110, 0.14), rgba(45, 122, 110, 0.08)); }
+  :root { color-scheme: light; }
 }
