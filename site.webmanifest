@@ -4,7 +4,7 @@
   "description": "Independent insurance payment guides with official insurer links and verification reminders.",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#f4fbf8",
+  "background_color": "#ffffff",
   "theme_color": "#2d7a6e",
   "icons": [
     {
