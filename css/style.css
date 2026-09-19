@@ -1,17 +1,17 @@
 :root {
   color-scheme: light;
-  --bg: #f4fbf8;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --surface-alt: #eef7f4;
-  --surface-strong: #d8ece6;
-  --text: #16312e;
-  --text-soft: #45635d;
-  --heading: #112725;
-  --line: #cfe2db;
-  --line-strong: #9fc7bc;
+  --surface-alt: #f4f8f7;
+  --surface-strong: #e7f0ed;
+  --text: #1c2b29;
+  --text-soft: #526864;
+  --heading: #10201e;
+  --line: #e3ebe8;
+  --line-strong: #c3d6d1;
   --brand: #2d7a6e;
-  --brand-deep: #20594f;
-  --brand-soft: #bfe2da;
+  --brand-deep: #1c5850;
+  --brand-soft: #d9ede8;
   --progressive: #0066cc;
   --progressive-deep: #063c73;
   --allstate: #c41e3a;
@@ -22,8 +22,9 @@
   --warning-line: #d6ac2f;
   --footer: #0f2421;
   --footer-soft: #aac7c0;
-  --shadow-sm: 0 10px 24px rgba(17, 39, 37, 0.08);
-  --shadow-md: 0 20px 40px rgba(17, 39, 37, 0.12);
+  --shadow-sm: 0 10px 24px rgba(17, 39, 37, 0.06);
+  --shadow-md: 0 20px 44px rgba(17, 39, 37, 0.10);
+  --shadow-lg: 0 30px 60px rgba(17, 39, 37, 0.14);
   --radius-sm: 0.75rem;
   --radius-md: 1.2rem;
   --radius-lg: 1.8rem;
@@ -48,8 +49,9 @@ body {
   font-size: 1rem;
   line-height: 1.72;
   color: var(--text);
-  background: linear-gradient(180deg, #f7fcfa 0%, var(--bg) 18rem, var(--bg) 100%);
+  background: #ffffff;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -57,6 +59,7 @@ a {
   text-decoration-thickness: 0.12em;
   text-underline-offset: 0.2em;
   overflow-wrap: anywhere;
+  transition: color 0.15s ease;
 }
 
 a:hover { color: var(--brand); }
@@ -161,14 +164,14 @@ strong { color: var(--heading); }
   top: 0;
   z-index: 50;
   backdrop-filter: blur(12px);
-  background: rgba(247, 252, 250, 0.94);
-  border-bottom: 1px solid rgba(207, 226, 219, 0.9);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--line);
   transition: box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .site-header.scrolled {
   box-shadow: var(--shadow-sm);
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .nav-wrap {
@@ -199,7 +202,10 @@ strong { color: var(--heading); }
   background: var(--surface);
   color: var(--heading);
   font-weight: 700;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
+
+.menu-toggle:hover { border-color: var(--brand); color: var(--brand); }
 
 .site-nav {
   display: flex;
@@ -281,6 +287,16 @@ strong { color: var(--heading); }
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.info-card:hover,
+.partner-card:hover,
+.related-card:hover,
+.contact-card:hover,
+.policy-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .hero-copy {
@@ -318,20 +334,22 @@ strong { color: var(--heading); }
   max-width: 100%;
   white-space: normal;
   text-align: center;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .button {
   padding: 0.85rem 1.2rem;
-  background: var(--brand);
+  background: linear-gradient(135deg, var(--brand-deep), var(--brand));
   color: #ffffff;
+  box-shadow: var(--shadow-sm);
 }
 
-.button:hover { background: var(--brand-deep); color: #ffffff; }
+.button:hover { background: var(--brand-deep); color: #ffffff; box-shadow: var(--shadow-md); transform: translateY(-1px); }
 
 .button-secondary {
   padding: 0.85rem 1.2rem;
   border: 1px solid var(--line-strong);
-  background: rgba(255, 255, 255, 0.7);
+  background: #ffffff;
   color: var(--heading);
 }
 
@@ -554,8 +572,8 @@ strong { color: var(--heading); }
   align-items: center;
   margin: 0 0 2rem;
   padding: 1.5rem;
-  border: 1px solid rgba(207, 226, 219, 0.9);
-  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(238,247,244,0.95));
+  border: 1px solid var(--line);
+  background: #ffffff;
 }
 
 .company-brand {
@@ -591,7 +609,7 @@ strong { color: var(--heading); }
   padding: 1rem 1.1rem;
   border: 1px solid var(--line);
   border-radius: 1rem;
-  background: rgba(255,255,255,0.7);
+  background: var(--surface-alt);
 }
 
 .insurer-facts {
@@ -842,7 +860,10 @@ td {
   color: #ffffff;
   text-decoration: none;
   box-shadow: var(--shadow-md);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+
+.back-to-top:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 
 .visually-hidden {
   position: absolute;
@@ -906,12 +927,22 @@ hr.section-rule {
     padding: 1rem;
     border: 1px solid var(--line);
     border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: var(--shadow-md);
+    background: #ffffff;
+    box-shadow: var(--shadow-lg);
+    z-index: 60;
   }
 
   .site-nav.open { display: flex; }
-  .site-nav a { padding: 0.2rem 0; }
+  .site-nav a {
+    padding: 0.6rem 0.5rem;
+    color: var(--heading);
+    border-radius: 0.6rem;
+  }
+  .site-nav a:hover,
+  .site-nav a[aria-current="page"] {
+    color: var(--brand-deep);
+    background: var(--surface-alt);
+  }
 
   .container { width: min(var(--container), calc(100% - 1.25rem)); }
 
@@ -938,41 +969,4 @@ hr.section-rule {
   .button-secondary { width: 100%; }
   .hero-actions,
   .button-row { align-items: stretch; }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --bg: #091412;
-    --surface: #10211f;
-    --surface-alt: #132a27;
-    --surface-strong: #163632;
-    --text: #ecf7f3;
-    --text-soft: #b6d0ca;
-    --heading: #ffffff;
-    --line: #284541;
-    --line-strong: #4e7d74;
-    --brand-soft: #23463f;
-    --warning: #352b12;
-    --warning-line: #f0c14b;
-    --footer: #050c0b;
-    --footer-soft: #a3c1bb;
-    --shadow-sm: 0 18px 32px rgba(0, 0, 0, 0.28);
-    --shadow-md: 0 28px 46px rgba(0, 0, 0, 0.35);
-  }
-
-  body { background: linear-gradient(180deg, #0b1413 0%, var(--bg) 18rem, var(--bg) 100%); }
-  .site-header { background: rgba(9, 20, 18, 0.92); }
-
-  .site-header.scrolled { background: rgba(16, 33, 31, 0.96); }
-  .button-secondary { background: rgba(16, 33, 31, 0.72); }
-  .insurer-profile {
-    background: linear-gradient(135deg, rgba(11, 22, 20, 0.97), rgba(16, 33, 31, 0.95));
-    border-color: rgba(78, 125, 116, 0.4);
-  }
-  .company-brand {
-    background: linear-gradient(135deg, rgba(8, 32, 31, 0.94), rgba(11, 27, 26, 0.98));
-  }
-  .insurer-details { background: rgba(12, 24, 22, 0.82); }
-  .quick-answer { background: linear-gradient(135deg, rgba(45, 122, 110, 0.14), rgba(45, 122, 110, 0.08)); }
 }
