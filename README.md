@@ -17,7 +17,7 @@ The website is designed to be:
 - **Human-first:** clear, practical explanations of how to pay insurance premiums through official channels
 - **Trust-forward:** visible review dates, strong disclaimers, legal pages, editorial transparency, and correction instructions
 - **Search-ready:** unique titles, meta descriptions, canonical URLs, structured data, sitemap, robots file, breadcrumb navigation, and internal linking
-- **Fast and accessible:** static HTML, small CSS and JavaScript, system fonts, async stylesheet loading, keyboard navigation, dark mode, and reduced-motion support
+- **Fast and accessible:** static HTML, small CSS and JavaScript, system fonts, keyboard navigation, dark mode, and reduced-motion support
 
 ## File structure
 
@@ -88,14 +88,13 @@ You can use any simple static server so long as it serves the repository root di
 
 ## GitHub Pages deployment
 
+This repository now includes `.github/workflows/pages.yml` for automatic deployment.
+
 1. Open the repository on GitHub.
 2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select:
-   - **Branch:** `main`
-   - **Folder:** `/ (root)`
-5. Save the settings.
-6. GitHub Pages will publish the project site at:
+3. Under **Build and deployment**, choose **GitHub Actions**.
+4. Push to `main` (or run the workflow manually with **Run workflow**).
+5. GitHub Pages publishes the project site at:
    - <https://getlivesupport.github.io/billmat/>
 
 ## SEO features implemented
@@ -122,7 +121,7 @@ This is a no-framework static site built to support strong Core Web Vitals and h
 ### Performance choices
 
 - inline critical CSS in each page head for above-the-fold stability
-- shared stylesheet loaded asynchronously from `css/style.css`
+- shared stylesheet loaded via standard `<link rel="stylesheet">` from `css/style.css`
 - small deferred JavaScript in `js/main.js`
 - no jQuery, frameworks, or third-party trackers
 - system-font stack instead of external font requests
@@ -197,6 +196,21 @@ When editing the site in the future, verify:
 - `sitemap.xml` includes all live pages
 - structured data remains valid JSON-LD
 - trust and disclaimer language remains accurate
+
+## Lightweight regression guardrail
+
+Run the static-site validator before publishing:
+
+```bash
+python3 scripts/validate_static_site.py
+```
+
+This check verifies:
+
+- every HTML entry page keeps viewport metadata
+- every page links directly to `css/style.css` (without fragile preload-only CSS loading)
+- tables stay wrapped in `.table-wrap`
+- the shared stylesheet does not globally hide horizontal overflow
 
 ## Independence and payment disclaimer
 
