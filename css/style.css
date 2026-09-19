@@ -164,14 +164,14 @@ strong { color: var(--heading); }
   top: 0;
   z-index: 50;
   backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid var(--line);
+  background: rgba(15, 36, 33, 0.96);
+  border-bottom: 1px solid rgba(170, 199, 192, 0.22);
   transition: box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .site-header.scrolled {
   box-shadow: var(--shadow-sm);
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(12, 28, 26, 0.98);
 }
 
 .nav-wrap {
@@ -183,29 +183,33 @@ strong { color: var(--heading); }
 }
 
 .logo {
-  color: var(--heading);
+  color: #ffffff;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.logo span { color: var(--brand); font-size: 0.8em; }
+.logo span { color: var(--footer-soft); font-size: 0.8em; }
 
 .menu-toggle {
   display: none;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(170, 199, 192, 0.35);
   border-radius: 999px;
   padding: 0.7rem 1rem;
-  background: var(--surface);
-  color: var(--heading);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
   font-weight: 700;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
 }
 
-.menu-toggle:hover { border-color: var(--brand); color: var(--brand); }
+.menu-toggle:hover {
+  border-color: var(--footer-soft);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
 
 .site-nav {
   display: flex;
@@ -216,14 +220,14 @@ strong { color: var(--heading); }
 }
 
 .site-nav a {
-  color: var(--heading);
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
 }
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
-  color: var(--brand);
+  color: var(--footer-soft);
 }
 
 .hero,
@@ -969,4 +973,40 @@ hr.section-rule {
   .button-secondary { width: 100%; }
   .hero-actions,
   .button-row { align-items: stretch; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #091412;
+    --surface: #10211f;
+    --surface-alt: #132a27;
+    --surface-strong: #163632;
+    --text: #ecf7f3;
+    --text-soft: #b6d0ca;
+    --heading: #ffffff;
+    --line: #284541;
+    --line-strong: #4e7d74;
+    --brand-soft: #23463f;
+    --warning: #352b12;
+    --warning-line: #f0c14b;
+    --footer: #050c0b;
+    --footer-soft: #a3c1bb;
+    --shadow-sm: 0 18px 32px rgba(0, 0, 0, 0.28);
+    --shadow-md: 0 28px 46px rgba(0, 0, 0, 0.35);
+  }
+
+  body { background: linear-gradient(180deg, #0b1413 0%, var(--bg) 18rem, var(--bg) 100%); }
+  .site-header { background: rgba(9, 20, 18, 0.92); }
+  .site-header.scrolled { background: rgba(16, 33, 31, 0.96); }
+  .button-secondary { background: rgba(16, 33, 31, 0.72); }
+  .insurer-profile {
+    background: linear-gradient(135deg, rgba(11, 22, 20, 0.97), rgba(16, 33, 31, 0.95));
+    border-color: rgba(78, 125, 116, 0.4);
+  }
+  .company-brand {
+    background: linear-gradient(135deg, rgba(8, 32, 31, 0.94), rgba(11, 27, 26, 0.98));
+  }
+  .insurer-details { background: rgba(12, 24, 22, 0.82); }
+  .quick-answer { background: linear-gradient(135deg, rgba(45, 122, 110, 0.14), rgba(45, 122, 110, 0.08)); }
 }
