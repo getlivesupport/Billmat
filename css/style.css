@@ -50,14 +50,13 @@ body {
   color: var(--text);
   background: linear-gradient(180deg, #f7fcfa 0%, var(--bg) 18rem, var(--bg) 100%);
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-  overflow-x: clip;
 }
 
 a {
   color: var(--brand-deep);
   text-decoration-thickness: 0.12em;
   text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
 }
 
 a:hover { color: var(--brand); }
@@ -247,6 +246,17 @@ strong { color: var(--heading); }
 .related-grid > *,
 .footer-grid > *,
 .insurer-profile > * {
+  min-width: 0;
+}
+
+.article-shell > *,
+.surface-card > *,
+.info-card > *,
+.notice-card > *,
+.callout > *,
+.contact-card > *,
+.related-card > *,
+.partner-card > * {
   min-width: 0;
 }
 
@@ -650,6 +660,11 @@ strong { color: var(--heading); }
   align-items: flex-start;
 }
 
+.steps-grid .info-card > :last-child,
+.checklist-grid .info-card > :last-child {
+  min-width: 0;
+}
+
 .number-chip {
   flex: none;
   background: linear-gradient(135deg, var(--brand-deep), var(--brand));
@@ -664,8 +679,8 @@ strong { color: var(--heading); }
 }
 
 .table-wrap table {
-  width: 100%;
-  min-width: 42rem;
+  width: max(100%, 42rem);
+  min-width: 0;
   border-collapse: collapse;
 }
 
@@ -682,6 +697,8 @@ td {
   border: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 th {
@@ -692,7 +709,6 @@ th {
 
 td {
   background: var(--surface);
-  overflow-wrap: anywhere;
 }
 
 .article-shell :is(h1, h2, h3, p, li, a, span, strong, address, th, td),
@@ -873,7 +889,7 @@ hr.section-rule {
     grid-template-columns: 1fr;
   }
 
-  .table-wrap table { min-width: 36rem; }
+  .table-wrap table { width: max(100%, 36rem); }
 }
 
 @media (max-width: 52rem) {
@@ -911,7 +927,7 @@ hr.section-rule {
     padding: 1.15rem;
   }
 
-  .table-wrap table { min-width: 32rem; }
+  .table-wrap table { width: max(100%, 32rem); }
 }
 
 @media (max-width: 30rem) {
